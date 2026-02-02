@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://pbmoqjvodepq"]
+[gd_scene format=3 uid="uid://pbmoqjvodepq"]
 
 [ext_resource type="Texture2D" uid="uid://dxa0bkbommaqo" path="res://assets/brackeys_platformer_assets/sprites/knight.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://bvlvaxfud8j1v" path="res://scripts/player.gd" id="1_g2els"]
@@ -42,16 +42,17 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_fjrip"]
 radius = 5.0
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1634346367]
 z_index = 5
+collision_layer = 2
 script = ExtResource("1_g2els")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1731795570]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_tuyoq")
 autoplay = "default"
 frame_progress = 0.74173874
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=793877616]
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_fjrip")
